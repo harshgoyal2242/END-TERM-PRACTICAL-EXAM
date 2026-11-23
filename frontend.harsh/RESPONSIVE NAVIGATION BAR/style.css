@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Requirement 2: Dark navy background & flexbox layout */
+.navbar {
+  background-color: #1e293b;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+/* Requirement 2: Blue background on hover */
+.nav-links a:hover {
+  background-color: #2563eb;
+}
+
+/* Requirement 3: Hide hamburger button on wide screens */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+main {
+  padding: 24px;
+}
+
+main h1 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+main p {
+  color: #4b5563;
+}
+
+/* Requirement 3: Media query for screens up to 600px wide */
+@media (max-width: 600px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  /* Requirement 4: Show menu when 'open' class is toggled */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    border-top: 1px solid #334155;
+  }
+}
